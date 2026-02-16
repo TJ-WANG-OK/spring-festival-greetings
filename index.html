@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新春祝福 - 2026年春节快乐！</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #8B0000 0%, #B22222 50%, #FF4500 100%);
+            min-height: 100vh;
+            font-family: 'Microsoft YaHei', 'SimHei', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* 飘落的雪花效果 */
+        .snowflake {
+            position: absolute;
+            color: #fff;
+            font-size: 1.5em;
+            text-shadow: 0 0 5px rgba(255,255,255,0.5);
+            user-select: none;
+            z-index: 1;
+        }
+        
+        /* 烟花效果 */
+        .firework {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            opacity: 0;
+            z-index: 2;
+        }
+        
+        .container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .header {
+            margin-bottom: 2rem;
+        }
+        
+        .title {
+            font-size: 3.5rem;
+            color: #FFD700;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            margin-bottom: 1rem;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 3px 3px 6px rgba(0,0,0,0.5), 0 0 10px #FFD700; }
+            to { text-shadow: 3px 3px 6px rgba(0,0,0,0.5), 0 0 20px #FFD700, 0 0 30px #FFD700; }
+        }
+        
+        .subtitle {
+            font-size: 1.8rem;
+            color: #FFFFFF;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 2rem;
+        }
+        
+        .greeting-card {
+            background: linear-gradient(145deg, #FF6347, #FF4500);
+            border: 8px solid #FFD700;
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .greeting-card::before {
+            content: "福";
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 8rem;
+            color: rgba(255, 215, 0, 0.1);
+            transform: rotate(15deg);
+            font-weight: bold;
+        }
+        
+        .blessing {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: #FFFFFF;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .signature {
+            font-size: 1.6rem;
+            color: #FFD700;
+            margin-top: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .lanterns {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .lantern {
+            width: 60px;
+            height: 80px;
+            background: radial-gradient(circle at center, #FF4500 0%, #8B0000 100%);
+            border-radius: 50% 50% 20% 20%;
+            position: relative;
+            box-shadow: 0 0 15px rgba(255, 69, 0, 0.5);
+            animation: swing 3s ease-in-out infinite;
+        }
+        
+        .lantern::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 20px;
+            background: #8B4513;
+        }
+        
+        .lantern::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: #8B4513;
+            border-radius: 50%;
+        }
+        
+        @keyframes swing {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+        
+        .footer {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            margin-top: 2rem;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .title { font-size: 2.5rem; }
+            .subtitle { font-size: 1.4rem; }
+            .blessing { font-size: 1.2rem; }
+            .signature { font-size: 1.4rem; }
+            .lantern { width: 40px; height: 60px; }
+        }
+        
+        @media (max-width: 480px) {
+            .title { font-size: 2rem; }
+            .subtitle { font-size: 1.2rem; }
+            .greeting-card { padding: 1.5rem; margin: 0 auto 1.5rem; }
+            .lanterns { gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">🎉 新春快乐 🎉</h1>
+            <h2 class="subtitle">2026年春节祝福</h2>
+        </div>
+        
+        <div class="greeting-card">
+            <div class="blessing">
+                亲爱的朋友：<br><br>
+                
+                金蛇狂舞辞旧岁，瑞雪纷飞迎新春！<br><br>
+                
+                在这辞旧迎新的美好时刻，谨向您致以最诚挚的祝福：<br><br>
+                
+                🧧 <strong>身体健康</strong> - 身如青松，体似金刚<br>
+                💰 <strong>财源广进</strong> - 金玉满堂，富贵吉祥<br>
+                🏆 <strong>事业有成</strong> - 鹏程万里，马到成功<br>
+                👨‍👩‍👧‍👦 <strong>家庭幸福</strong> - 阖家欢乐，万事如意<br>
+                🌟 <strong>好运连连</strong> - 福星高照，心想事成<br><br>
+                
+                愿新的一年里，您和您的家人平安喜乐，幸福安康！
+            </div>
+            <div class="signature">
+                —— 大王 敬上
+            </div>
+        </div>
+        
+        <div class="lanterns">
+            <div class="lantern"></div>
+            <div class="lantern"></div>
+            <div class="lantern"></div>
+        </div>
+        
+        <div class="footer">
+            分享自 GitHub Pages | 2026年春节
+        </div>
+    </div>
+
+    <script>
+        // 飘落的雪花效果
+        function createSnowflakes() {
+            const container = document.body;
+            const snowflakes = ['❄', '❅', '❆'];
+            
+            for (let i = 0; i < 50; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.innerHTML = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                snowflake.style.opacity = Math.random() * 0.7 + 0.3;
+                snowflake.style.fontSize = Math.random() * 20 + 10 + 'px';
+                snowflake.style.animationDuration = Math.random() * 5 + 5 + 's';
+                snowflake.style.animationDelay = Math.random() * 5 + 's';
+                container.appendChild(snowflake);
+                
+                // 动画样式
+                const style = document.createElement('style');
+                style.textContent = `
+                    @keyframes fall {
+                        0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
+                        10% { opacity: ${Math.random() * 0.7 + 0.3}; }
+                        90% { opacity: ${Math.random() * 0.7 + 0.3}; }
+                        100% { transform: translateY(100vh) rotate(${Math.random() * 360}deg); opacity: 0; }
+                    }
+                    .snowflake {
+                        animation: fall ${Math.random() * 5 + 5}s linear infinite;
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        }
+        
+        // 烟花效果
+        function createFireworks() {
+            setInterval(() => {
+                if (Math.random() > 0.7) {
+                    const firework = document.createElement('div');
+                    firework.className = 'firework';
+                    firework.style.left = Math.random() * 100 + 'vw';
+                    firework.style.top = Math.random() * 30 + 'vh';
+                    firework.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                    document.body.appendChild(firework);
+                    
+                    // 烟花动画
+                    firework.animate([
+                        { opacity: 0, transform: 'scale(0)' },
+                        { opacity: 1, transform: 'scale(1)' },
+                        { opacity: 0, transform: 'scale(3)' }
+                    ], {
+                        duration: 2000,
+                        easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
+                    });
+                    
+                    setTimeout(() => firework.remove(), 2000);
+                }
+            }, 1000);
+        }
+        
+        // 页面加载完成后启动效果
+        window.addEventListener('load', () => {
+            createSnowflakes();
+            createFireworks();
+        });
+    </script>
+</body>
+</html>
