@@ -41,12 +41,13 @@
         
         /* 飘落的雪花效果 */
         .snowflake {
-            position: absolute;
+            position: fixed;
             color: #fff;
             font-size: 1.5em;
             text-shadow: 0 0 5px rgba(255,255,255,0.5);
             user-select: none;
-            z-index: 1;
+            z-index: 5;
+            pointer-events: none;
         }
         
         /* 烟花效果 */
